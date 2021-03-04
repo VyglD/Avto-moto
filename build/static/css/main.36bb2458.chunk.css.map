@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/styles/scss/index.scss"],"names":[],"mappings":"AAAA,MACE,cAAe,CACf,gBAAiB,CACjB,iBAAkB,CAElB,SAAU","file":"main.36bb2458.chunk.css","sourcesContent":[".test {\n  font-size: 32px;\n  line-height: 40px;\n  text-align: center;\n\n  color: red;\n}\n"]}

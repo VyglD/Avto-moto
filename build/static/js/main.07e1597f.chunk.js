@@ -1,0 +1,2 @@
+(this["webpackJsonpavto-moto"]=this["webpackJsonpavto-moto"]||[]).push([[0],{10:function(t,e,o){"use strict";o.r(e);o(4);var n=o(0),c=o.n(n),r=o(3),s=o.n(r),a=o(1);var i=function(){return Object(a.jsx)("h1",{className:"test",children:"Hellow world!"})};s.a.render(Object(a.jsx)(c.a.StrictMode,{children:Object(a.jsx)(i,{})}),document.getElementById("root"))},4:function(t,e,o){}},[[10,1,2]]]);
+//# sourceMappingURL=main.07e1597f.chunk.js.map
