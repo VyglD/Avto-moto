@@ -1,5 +1,9 @@
+@import "./config/fonts.scss";
+
 .test {
   font-size: 32px;
+  font-family: "Open Sans", "Tahoma", sans-serif;
+  font-weight: 700;
   line-height: 40px;
   text-align: center;
 
