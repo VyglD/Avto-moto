@@ -1,8 +1,18 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import logo from "../../../images/logo.svg";
 
-const PrimeHeader = () => {
+const links = [
+  `Автомобили`,
+  `Контакты`,
+  `Услуги`,
+  `Вакансии`,
+];
+
+const PrimeHeader = (props) => {
+  const {onBlankLinkClick} = props;
+
   return (
     <header className="prime-header">
       <div className="prime-header__content">
@@ -15,26 +25,19 @@ const PrimeHeader = () => {
         />
         <nav className="prime-header__nav">
           <ul className="prime-header__nav-links-list">
-            <li className="prime-header__nav-link-wrapper">
-              <a className="prime-header__nav-link" href="#blank">
-                Автомобили
-              </a>
-            </li>
-            <li className="prime-header__nav-link-wrapper">
-              <a className="prime-header__nav-link" href="#blank">
-                Контакты
-              </a>
-            </li>
-            <li className="prime-header__nav-link-wrapper">
-              <a className="prime-header__nav-link" href="#blank">
-                Услуги
-              </a>
-            </li>
-            <li className="prime-header__nav-link-wrapper">
-              <a className="prime-header__nav-link" href="#blank">
-                Вакансии
-              </a>
-            </li>
+            {
+              links.map((link, index) => (
+                <li key={index} className="prime-header__nav-link-wrapper">
+                  <a
+                    className="prime-header__nav-link"
+                    href="#blank"
+                    onClick={onBlankLinkClick}
+                  >
+                    {link}
+                  </a>
+                </li>
+              ))
+            }
           </ul>
         </nav>
       </div>
@@ -42,6 +45,8 @@ const PrimeHeader = () => {
   );
 };
 
-PrimeHeader.propTypes = {};
+PrimeHeader.propTypes = {
+  onBlankLinkClick: PropTypes.func.isRequired,
+};
 
 export default PrimeHeader;

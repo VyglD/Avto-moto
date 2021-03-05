@@ -1,9 +1,27 @@
 import React from "react";
+import {ToastContainer, toast} from "react-toastify";
 import PrimeHeader from "../prime-header/prime-header";
+
+import "react-toastify/dist/ReactToastify.css";
+
+const handleBlankLinkClick = (evt) => {
+  evt.preventDefault();
+
+  toast.info(`Функционал отсутствует`);
+};
 
 function App() {
   return (
-    <PrimeHeader />
+    <React.Fragment>
+      <PrimeHeader
+        onBlankLinkClick={handleBlankLinkClick}
+      />
+      <ToastContainer
+        autoClose={5000}
+        position={toast.POSITION.TOP_LEFT}
+        pauseOnFocusLoss={false}
+      />
+    </React.Fragment>
   );
 }
 
