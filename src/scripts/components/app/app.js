@@ -1,6 +1,7 @@
 import React from "react";
 import {ToastContainer, toast} from "react-toastify";
 import PrimeHeader from "../prime-header/prime-header";
+import PrimeFooter from "../prime-footer/prime-footer";
 
 import "react-toastify/dist/ReactToastify.css";
 
@@ -14,6 +15,9 @@ function App() {
   return (
     <React.Fragment>
       <PrimeHeader
+        onBlankLinkClick={handleBlankLinkClick}
+      />
+      <PrimeFooter
         onBlankLinkClick={handleBlankLinkClick}
       />
       <ToastContainer
