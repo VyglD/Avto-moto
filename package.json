@@ -37,7 +37,8 @@
     ]
   },
   "pre-commit": [
-    "test"
+    "test",
+    "build"
   ],
   "editorconfig-cli": [
     "*.json",

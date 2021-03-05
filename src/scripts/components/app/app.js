@@ -1,8 +1,9 @@
 import React from "react";
+import PrimeHeader from "../prime-header/prime-header";
 
 function App() {
   return (
-    <h1 className="test">Hello world!</h1>
+    <PrimeHeader />
   );
 }
 

@@ -1,0 +1,11 @@
+$offset: 20px;
+$desktop-content: 1175px;
+$desktop: #{$offset * 2 + $desktop-content};
+$min-desktop: 1024px;
+
+:root {
+  --color-black-0: #000000;
+  --color-black-1: #48494D;
+  --color-gray-0: #F5F5F9;
+  --color-white-0: #FFFFFF;
+}
