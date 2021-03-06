@@ -8,7 +8,7 @@ const links = [
   `Каршеринг`,
   `Как продать авто`,
   `Traid-in`,
-  `Test draiv`,
+  `Test draiv`
 ];
 
 const PrimeFooter = (props) => {

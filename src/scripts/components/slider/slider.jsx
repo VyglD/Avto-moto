@@ -66,7 +66,7 @@ const slides = [
     imgMiniWebp: slide3ImgMiniWebp,
     imgMiniWebp2x: slide3ImgMiniWebp2x,
     alt: `Уникальный дизайн приборной панели.`,
-  },
+  }
 ];
 
 
@@ -93,7 +93,7 @@ const Slider = () => {
 
   return (
     <section className="slider">
-      <h2 className="visually-hidden">Галерея изображений</h2>
+      <h2 className="slider__title visually-hidden">Галерея изображений</h2>
       <picture className="slider__img-wrapper">
         <source
           type="image/webp"

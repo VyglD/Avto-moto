@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Slider from "../slider/slider";
+import Info from "../info/info";
 
 const properties = [
   {
@@ -18,7 +19,7 @@ const properties = [
   {
     title: `1.4 л`,
     modifier: `engine`,
-  },
+  }
 ];
 
 const Main = (props) => {
@@ -65,6 +66,7 @@ const Main = (props) => {
           <Slider />
         </div>
       </div>
+      <Info />
     </main>
   );
 };
