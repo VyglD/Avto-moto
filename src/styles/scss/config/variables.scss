@@ -3,9 +3,14 @@ $desktop-content: 1175px;
 $desktop: #{$offset * 2 + $desktop-content};
 $min-desktop: 1024px;
 
+$color-black-1: #48494D;
+
 :root {
   --color-black-0: #000000;
-  --color-black-1: #48494D;
+  --color-black-1: #{$color-black-1};
+  --color-black-1-05: rgba(#{hex-to-rgb($color-black-1)}, 0.5);
   --color-gray-0: #F5F5F9;
   --color-white-0: #FFFFFF;
+  --color-red-0: #D12136;
+  --color-red-1: #BD0C21;
 }
