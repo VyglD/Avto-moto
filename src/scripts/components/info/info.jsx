@@ -1,5 +1,9 @@
 import React from "react";
+import PropTypes from "prop-types";
 import PropertyTable from "../property-table/property-table";
+import Reviews from "../reviews/reviews";
+
+const REVIEWS_TITLE = `Отзывы`;
 
 const tabs = [
   {
@@ -7,16 +11,19 @@ const tabs = [
     component: (<PropertyTable />),
   },
   {
-    title: `Отзывы`,
-    component: (<div>Отзывы</div>),
+    title: REVIEWS_TITLE,
+    component: (<Reviews />),
   },
   {
     title: `Контакты`,
     component: (<div>Контакты</div>),
+
   }
 ];
 
-const Info = () => {
+const Info = (props) => {
+  const {onBlankLinkClick} = props;
+
   const [activeTab, setActiveTab] = React.useState(tabs[0]);
 
   return (
@@ -43,11 +50,17 @@ const Info = () => {
           })
         }
       </ul>
-      {activeTab.component}
+      {
+        activeTab.title === REVIEWS_TITLE
+          ? <Reviews onBlankLinkClick={onBlankLinkClick} />
+          : activeTab.component
+      }
     </section>
   );
 };
 
-Info.propTypes = {};
+Info.propTypes = {
+  onBlankLinkClick: PropTypes.func.isRequired,
+};
 
 export default Info;

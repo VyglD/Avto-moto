@@ -66,7 +66,9 @@ const Main = (props) => {
           <Slider />
         </div>
       </div>
-      <Info />
+      <Info
+        onBlankLinkClick={onBlankLinkClick}
+      />
     </main>
   );
 };
