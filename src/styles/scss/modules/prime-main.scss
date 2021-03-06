@@ -6,14 +6,19 @@
   margin: 0 auto;
 }
 
-.prime-main__content {
+.prime-main__banner {
+  display: flex;
+}
+
+.prime-main__right-column {
   box-sizing: border-box;
   max-width: 575px;
   margin-left: auto;
-  padding: 0 50px;
+  padding-left: 50px;
 }
 
 .prime-main__title {
+  width: auto;
   padding: 0 4px;
   margin: 0 auto;
 
@@ -26,8 +31,10 @@
 
 .prime-main__properties-list {
   display: flex;
+  flex-wrap: wrap;
 
-  margin: 21px 0 0 4px;
+  width: auto;
+  margin: 11px 0 0 4px;
 }
 
 .prime-main__property {
@@ -35,7 +42,7 @@
   flex-direction: column;
 
   min-width: 70px;
-  margin-right: 7px;
+  margin: 10px 7px 0 0;
 
   text-align: center;
 
@@ -74,6 +81,7 @@
 
   display: inline-block;
 
+  width: auto;
   margin: 37px 30px 0 4px;
 
   font-weight: 700;
@@ -112,8 +120,9 @@
 .prime-main__purchase {
   display: inline-block;
 
+  width: auto;
   padding: 16px 20px 17px;
-  margin: 37px 60px 0 0;
+  margin: 37px 110px 0 0;
 
   font-weight: 600;
   font-size: 14px;
@@ -144,6 +153,7 @@
   display: inline-block;
 
   box-sizing: border-box;
+  width: auto;
   margin-top: 16px;
   padding: 16px 19px 15px 20px;
 
@@ -172,4 +182,12 @@
 
 .prime-main__credit:active {
   opacity: 0.2;
+}
+
+.prime-main__left-column {
+  display: block;
+  order: -1;
+
+  min-width: 310px;
+  max-width: 600px;
 }
