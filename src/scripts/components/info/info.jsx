@@ -1,9 +1,10 @@
 import React from "react";
+import PropertyTable from "../property-table/property-table";
 
 const tabs = [
   {
     title: `Характеристики`,
-    component: (<div>Характеристики</div>),
+    component: (<PropertyTable />),
   },
   {
     title: `Отзывы`,
