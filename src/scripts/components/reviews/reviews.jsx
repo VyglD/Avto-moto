@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+import {handleBlankLinkClick} from "../../utils";
 
 const UsersReviews = [
   {
@@ -26,9 +26,7 @@ const UsersReviews = [
   }
 ];
 
-const Reviews = (props) => {
-  const {onBlankLinkClick} = props;
-
+const Reviews = () => {
   return (
     <div className="reviews">
       <button className="reviews__add-button" type="button">Оставить отзыв</button>
@@ -81,7 +79,7 @@ const Reviews = (props) => {
                   <a
                     className="reviews__review-feedback"
                     href="#blank"
-                    onClick={onBlankLinkClick}
+                    onClick={handleBlankLinkClick}
                   >
                     Ответить
                   </a>
@@ -95,8 +93,6 @@ const Reviews = (props) => {
   );
 };
 
-Reviews.propTypes = {
-  onBlankLinkClick: PropTypes.func,
-};
+Reviews.propTypes = {};
 
 export default Reviews;

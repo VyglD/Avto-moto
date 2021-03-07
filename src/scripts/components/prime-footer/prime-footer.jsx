@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+import {handleBlankLinkClick} from "../../utils";
 
 const links = [
   `Корпоративным клиентам`,
@@ -11,9 +11,7 @@ const links = [
   `Test draiv`
 ];
 
-const PrimeFooter = (props) => {
-  const {onBlankLinkClick} = props;
-
+const PrimeFooter = () => {
   return (
     <footer className="prime-footer">
       <nav className="prime-footer__nav">
@@ -24,7 +22,7 @@ const PrimeFooter = (props) => {
                 <a
                   className="prime-footer__nav-link"
                   href="#blank"
-                  onClick={onBlankLinkClick}
+                  onClick={handleBlankLinkClick}
                 >
                   {link}
                 </a>
@@ -37,8 +35,6 @@ const PrimeFooter = (props) => {
   );
 };
 
-PrimeFooter.propTypes = {
-  onBlankLinkClick: PropTypes.func.isRequired,
-};
+PrimeFooter.propTypes = {};
 
 export default PrimeFooter;

@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+import {handleBlankLinkClick} from "../../utils";
 
 import logo from "../../../images/logo.svg";
 
@@ -10,9 +10,7 @@ const links = [
   `Вакансии`
 ];
 
-const PrimeHeader = (props) => {
-  const {onBlankLinkClick} = props;
-
+const PrimeHeader = () => {
   return (
     <header className="prime-header">
       <div className="prime-header__content">
@@ -31,7 +29,7 @@ const PrimeHeader = (props) => {
                   <a
                     className="prime-header__nav-link"
                     href="#blank"
-                    onClick={onBlankLinkClick}
+                    onClick={handleBlankLinkClick}
                   >
                     {link}
                   </a>
@@ -45,8 +43,6 @@ const PrimeHeader = (props) => {
   );
 };
 
-PrimeHeader.propTypes = {
-  onBlankLinkClick: PropTypes.func.isRequired,
-};
+PrimeHeader.propTypes = {};
 
 export default PrimeHeader;

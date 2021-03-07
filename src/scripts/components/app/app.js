@@ -6,24 +6,12 @@ import Main from "../main/main";
 
 import "react-toastify/dist/ReactToastify.css";
 
-const handleBlankLinkClick = (evt) => {
-  evt.preventDefault();
-
-  toast.info(`Функционал отсутствует`);
-};
-
 function App() {
   return (
     <React.Fragment>
-      <PrimeHeader
-        onBlankLinkClick={handleBlankLinkClick}
-      />
-      <Main
-        onBlankLinkClick={handleBlankLinkClick}
-      />
-      <PrimeFooter
-        onBlankLinkClick={handleBlankLinkClick}
-      />
+      <PrimeHeader />
+      <Main />
+      <PrimeFooter />
       <ToastContainer
         autoClose={5000}
         position={toast.POSITION.TOP_LEFT}

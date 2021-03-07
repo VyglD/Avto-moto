@@ -1,7 +1,7 @@
 import React from "react";
-import PropTypes from "prop-types";
 import Slider from "../slider/slider";
 import Info from "../info/info";
+import {handleBlankLinkClick} from "../../utils";
 
 const properties = [
   {
@@ -22,9 +22,7 @@ const properties = [
   }
 ];
 
-const Main = (props) => {
-  const {onBlankLinkClick} = props;
-
+const Main = () => {
   return (
     <main className="prime-main">
       <div className="prime-main__banner">
@@ -50,14 +48,14 @@ const Main = (props) => {
           <a
             className="prime-main__purchase"
             href="#blank"
-            onClick={onBlankLinkClick}
+            onClick={handleBlankLinkClick}
           >
             Оставить заявку
           </a>
           <a
             className="prime-main__credit"
             href="#blank"
-            onClick={onBlankLinkClick}
+            onClick={handleBlankLinkClick}
           >
             В кредит от 11 000 ₽
           </a>
@@ -66,15 +64,11 @@ const Main = (props) => {
           <Slider />
         </div>
       </div>
-      <Info
-        onBlankLinkClick={onBlankLinkClick}
-      />
+      <Info />
     </main>
   );
 };
 
-Main.propTypes = {
-  onBlankLinkClick: PropTypes.func.isRequired,
-};
+Main.propTypes = {};
 
 export default Main;
