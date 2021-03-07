@@ -1,4 +1,6 @@
 import React from "react";
+import Stars from "../stars/stars";
+import Popup from "../popup/popup";
 import {handleBlankLinkClick} from "../../utils";
 
 const UsersReviews = [
@@ -27,10 +29,40 @@ const UsersReviews = [
 ];
 
 const Reviews = () => {
+  const [popupVisibility, setPopupVisibility] = React.useState(false);
+
+  const handleAddReviewButtonClick = React.useCallback(
+      () => {
+        const paddingOffset = `${window.innerWidth - document.body.offsetWidth}px`;
+
+        document.body.style.paddingRight = paddingOffset;
+        document.body.style.overflow = `hidden`;
+
+        setPopupVisibility(true);
+      },
+      [setPopupVisibility]
+  );
+
+  const handleClosePopupButtonClick = React.useCallback(
+      () => {
+        document.body.style.paddingRight = `0`;
+        document.body.style.overflow = `auto`;
+
+        setPopupVisibility(false);
+      },
+      [setPopupVisibility]
+  );
+
   return (
     <section className="reviews">
       <h3 className="reviews__title visually-hidden">Отзывы</h3>
-      <button className="reviews__add-button" type="button">Оставить отзыв</button>
+      <button
+        className="reviews__add-button"
+        type="button"
+        onClick={handleAddReviewButtonClick}
+      >
+        Оставить отзыв
+      </button>
       <ul className="reviews__list">
         {
           UsersReviews.map((review, index) => (
@@ -52,27 +84,11 @@ const Reviews = () => {
                 <p className="reviews__review-comment-title">Комментарий</p>
                 <p className="reviews__review-comment">{review.comment}</p>
                 <div className="reviews__review-rate-wrapper">
-                  {
-                    new Array(5).fill().map((item, starIndex) => {
-                      const activeClass = starIndex < review.rate
-                        ? `reviews__review-rate-point--active`
-                        : ``;
-
-                      return (
-                        <svg
-                          key={starIndex}
-                          className={`reviews__review-rate-point ${activeClass}`}
-                          width="17"
-                          height="16"
-                        >
-                          <path
-                            d="M8.63145 0l1.87885 5.87336h6.0803l-4.919 3.62993 1.8789 5.87331-4.91905-3.6299-4.91903 3.6299 1.8789-5.87331L.672291 5.87336H6.75254L8.63145 0z"
-                            fill="#BDBEC2"
-                          />
-                        </svg>
-                      );
-                    })
-                  }
+                  <Stars
+                    className={`reviews__review-rate-point`}
+                    activeClass={`reviews__review-rate-point--active`}
+                    isActive={(starIndex) => starIndex < review.rate}
+                  />
                   <p className="reviews__review-rate-summary">Советует</p>
                 </div>
                 <div className="reviews__review-output">
@@ -90,6 +106,11 @@ const Reviews = () => {
           ))
         }
       </ul>
+      {popupVisibility &&
+        <Popup
+          onCloseButtonClick={handleClosePopupButtonClick}
+        />
+      }
     </section>
   );
 };

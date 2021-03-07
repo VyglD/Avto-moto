@@ -59,13 +59,20 @@
 
 .reviews__review-rate-wrapper {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 
   margin-top: 21px;
 }
 
 .reviews__review-rate-point {
+  width: 17px;
+  height: 16px;
   margin-right: 5px;
+  padding: 0;
+
+  background-color: transparent;
+
+  border: none;
 
   &--active path {
     fill: var(--color-red-0, red);
