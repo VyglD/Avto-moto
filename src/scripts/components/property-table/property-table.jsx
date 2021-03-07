@@ -33,20 +33,23 @@ const properties = [
 
 const PropertyTable = () => {
   return (
-    <ul className="property-table">
-      {
-        properties.map((property, index) => (
-          <li key={index} className="property-table__property-wrapper">
-            <p className="property-table__property-name">
-              {property.name}
-            </p>
-            <p className="property-table__property-value">
-              {property.value}
-            </p>
-          </li>
-        ))
-      }
-    </ul>
+    <section className="property-table">
+      <h3 className="property-table__title visually-hidden">Характеристики</h3>
+      <ul className="property-table__properties-list">
+        {
+          properties.map((property, index) => (
+            <li key={index} className="property-table__property-wrapper">
+              <p className="property-table__property-name">
+                {property.name}
+              </p>
+              <p className="property-table__property-value">
+                {property.value}
+              </p>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
   );
 };
 

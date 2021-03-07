@@ -25,6 +25,7 @@
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.0.0",
     "eslint-config-htmlacademy": "2.1.0",
+    "google-map-react": "2.1.9",
     "node-sass": "5.0.0",
     "pre-commit": "1.2.2",
     "react-toastify": "7.0.3",

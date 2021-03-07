@@ -28,14 +28,15 @@ const UsersReviews = [
 
 const Reviews = () => {
   return (
-    <div className="reviews">
+    <section className="reviews">
+      <h3 className="reviews__title visually-hidden">Отзывы</h3>
       <button className="reviews__add-button" type="button">Оставить отзыв</button>
       <ul className="reviews__list">
         {
           UsersReviews.map((review, index) => (
             <li key={index} className="reviews__review-wrapper">
               <article className="reviews__review">
-                <h3 className="reviews__review-author">{review.name}</h3>
+                <h4 className="reviews__review-author">{review.name}</h4>
                 <p className="reviews__review-advantages-title">
                   <span>+</span> Достоинства
                 </p>
@@ -89,7 +90,7 @@ const Reviews = () => {
           ))
         }
       </ul>
-    </div>
+    </section>
   );
 };
 

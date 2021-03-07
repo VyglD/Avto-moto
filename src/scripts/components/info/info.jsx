@@ -1,6 +1,7 @@
 import React from "react";
 import PropertyTable from "../property-table/property-table";
 import Reviews from "../reviews/reviews";
+import Contacts from "../contacts/contacts";
 
 const tabs = [
   {
@@ -13,7 +14,7 @@ const tabs = [
   },
   {
     title: `Контакты`,
-    component: (<div>Контакты</div>),
+    component: (<Contacts />),
 
   }
 ];
