@@ -1,6 +1,6 @@
 import React from "react";
 
-const properties = [
+const PROPERTIES = [
   {
     name: `Трансмиссия`,
     value: `Роботизированная`,
@@ -37,7 +37,7 @@ const PropertyTable = () => {
       <h3 className="property-table__title visually-hidden">Характеристики</h3>
       <ul className="property-table__properties-list">
         {
-          properties.map((property, index) => (
+          PROPERTIES.map((property, index) => (
             <li key={index} className="property-table__property-wrapper">
               <p className="property-table__property-name">
                 {property.name}

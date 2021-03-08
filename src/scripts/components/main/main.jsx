@@ -3,7 +3,7 @@ import Slider from "../slider/slider";
 import Info from "../info/info";
 import {handleBlankLinkClick} from "../../utils";
 
-const properties = [
+const PROPERTIES = [
   {
     title: `бензин`,
     modifier: `gas`,
@@ -30,7 +30,7 @@ const Main = () => {
           <h1 className="prime-main__title">Марпех 11</h1>
           <ul className="prime-main__properties-list">
             {
-              properties.map((property, index) => (
+              PROPERTIES.map((property, index) => (
                 <li
                   key={index}
                   className={

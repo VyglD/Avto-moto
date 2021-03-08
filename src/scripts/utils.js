@@ -1,5 +1,5 @@
 import {toast} from "react-toastify";
-import {FOCUS_ELEMENTS, Key} from "./constans";
+import {FOCUS_ELEMENTS, Key} from "./constants";
 
 const handleBlankLinkClick = (evt) => {
   evt.preventDefault();

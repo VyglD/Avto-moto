@@ -33,7 +33,7 @@ const ARROW = (
   </svg>
 );
 
-const slides = [
+const SLIDES = [
   {
     img: slide1Img,
     img2x: slide1Img2x,
@@ -71,22 +71,22 @@ const slides = [
 
 
 const getActiveIndex = (activeSlide) => {
-  return slides.findIndex((slide) => slide === activeSlide);
+  return SLIDES.findIndex((slide) => slide === activeSlide);
 };
 
 const Slider = () => {
-  const [activeSlide, setActiveSlide] = React.useState(slides[0]);
+  const [activeSlide, setActiveSlide] = React.useState(SLIDES[0]);
 
   const setNextSlide = React.useCallback(
       () => {
-        setActiveSlide(slides[getActiveIndex(activeSlide) + 1]);
+        setActiveSlide(SLIDES[getActiveIndex(activeSlide) + 1]);
       },
       [activeSlide]
   );
 
   const setPreviousSlide = React.useCallback(
       () => {
-        setActiveSlide(slides[getActiveIndex(activeSlide) - 1]);
+        setActiveSlide(SLIDES[getActiveIndex(activeSlide) - 1]);
       },
       [activeSlide]
   );
@@ -114,13 +114,13 @@ const Slider = () => {
           type="button"
           aria-label="Предыдущий слайд"
           onClick={setPreviousSlide}
-          disabled={activeSlide === slides[0] ? true : false}
+          disabled={activeSlide === SLIDES[0] ? true : false}
         >
           {ARROW}
         </button>
         <ul className="slider__thumbnails-list">
           {
-            slides.map((slide, index) => (
+            SLIDES.map((slide, index) => (
               <li key={index} className="slider__thumbnail-wrapper">
                 <picture className="slider__thumbnails-picture">
                   <source
@@ -145,7 +145,7 @@ const Slider = () => {
           type="button"
           aria-label="Следующий слайд"
           onClick={setNextSlide}
-          disabled={activeSlide === slides[slides.length - 1] ? true : false}
+          disabled={activeSlide === SLIDES[SLIDES.length - 1] ? true : false}
         >
           {ARROW}
         </button>

@@ -3,7 +3,7 @@ import {handleBlankLinkClick} from "../../utils";
 
 import logo from "../../../images/logo.svg";
 
-const links = [
+const LINKS = [
   `Автомобили`,
   `Контакты`,
   `Услуги`,
@@ -24,7 +24,7 @@ const PrimeHeader = () => {
         <nav className="prime-header__nav">
           <ul className="prime-header__nav-links-list">
             {
-              links.map((link, index) => (
+              LINKS.map((link, index) => (
                 <li key={index} className="prime-header__nav-link-wrapper">
                   <a
                     className="prime-header__nav-link"

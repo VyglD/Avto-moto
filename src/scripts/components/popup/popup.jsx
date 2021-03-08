@@ -1,13 +1,15 @@
 import React from "react";
+import {connect} from "react-redux";
 import Stars from "../stars/stars";
 import PropTypes from "prop-types";
+import {addNewReview} from "../../middlewares/thunk";
 import {
   getFocusableElements,
   isEscKeyDown,
   getNextArrayIndex,
   getPreviousArrayIndex,
 } from "../../utils";
-import {Key} from "../../constans";
+import {Key} from "../../constants";
 
 const CustomClass = {
   POPUP: `popup`,
@@ -40,7 +42,7 @@ const handleInputEnter = (evt) => {
 };
 
 const Popup = (props) => {
-  const {onCloseButtonClick} = props;
+  const {onCloseButtonClick, addReview} = props;
 
   const popupRef = React.createRef();
   const previousFocusableElement = React.useRef(document.activeElement);
@@ -120,10 +122,27 @@ const Popup = (props) => {
         });
 
         if (formValidity) {
+          const newReview = Array.from(
+              popupRef.current.querySelectorAll(`input, textarea`)
+          )
+            .map((input) => ({name: input.name, value: input.value}))
+            .reduce((result, item) => {
+              return {
+                ...result,
+                [item.name]: item.value
+              };
+            }, {});
+
+          newReview.rate = parseInt(
+              popupRef.current.querySelectorAll(`.${CustomClass.STAR_CHECKED}`).length,
+              10
+          );
+
+          addReview(newReview);
           onCloseButtonClick();
         }
       },
-      [popupRef, onCloseButtonClick]
+      [popupRef, onCloseButtonClick, addReview]
   );
 
   const handleStarClick = React.useCallback(
@@ -265,6 +284,14 @@ const Popup = (props) => {
 
 Popup.propTypes = {
   onCloseButtonClick: PropTypes.func.isRequired,
+  addReview: PropTypes.func.isRequired,
 };
 
-export default Popup;
+const mapDispatchToProps = (dispatch) => ({
+  addReview: (newReview) => {
+    dispatch(addNewReview(newReview));
+  },
+});
+
+export {Popup};
+export default connect(null, mapDispatchToProps)(Popup);

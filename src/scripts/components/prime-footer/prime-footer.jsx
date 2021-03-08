@@ -1,7 +1,7 @@
 import React from "react";
 import {handleBlankLinkClick} from "../../utils";
 
-const links = [
+const LINKS = [
   `Корпоративным клиентам`,
   `Клиентам`,
   `Аренда авто`,
@@ -17,7 +17,7 @@ const PrimeFooter = () => {
       <nav className="prime-footer__nav">
         <ul className="prime-footer__nav-links-list">
           {
-            links.map((link, index) => (
+            LINKS.map((link, index) => (
               <li key={index} className="prime-footer__nav-link-wrapper">
                 <a
                   className="prime-footer__nav-link"

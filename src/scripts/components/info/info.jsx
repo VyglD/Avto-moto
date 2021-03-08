@@ -3,7 +3,7 @@ import PropertyTable from "../property-table/property-table";
 import Reviews from "../reviews/reviews";
 import Contacts from "../contacts/contacts";
 
-const tabs = [
+const TABS = [
   {
     title: `Характеристики`,
     component: (<PropertyTable />),
@@ -20,14 +20,14 @@ const tabs = [
 ];
 
 const Info = () => {
-  const [activeTab, setActiveTab] = React.useState(tabs[0]);
+  const [activeTab, setActiveTab] = React.useState(TABS[0]);
 
   return (
     <section className="info">
       <h2 className="info__title visually-hidden">Подробная информация</h2>
       <ul className="info__tabs-list">
         {
-          tabs.map((tab, index) => {
+          TABS.map((tab, index) => {
             const active = activeTab === tab;
             const customClass = active ? `info__tab--active` : ``;
 
