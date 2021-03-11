@@ -102,13 +102,15 @@
   justify-content: space-between;
 
   flex-grow: 1;
-  max-width: 434px;
+  max-width: 444px;
   margin: 0 auto;
 }
 
 .slider__thumbnail-wrapper {
   display: flex;
   align-items: center;
+
+  margin: 0 5px;
 }
 
 .slider__thumbnails-img {
