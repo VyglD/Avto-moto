@@ -21,7 +21,7 @@
     "jest": "react-scripts test",
     "jest:no-watch": "react-scripts test --watchAll=false",
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && node ./preload.js",
     "test": "npm run jest:no-watch && npm run stylelint && npm run editorconfig && npm run eslint",
     "eject": "react-scripts eject"
   },
