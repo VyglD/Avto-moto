@@ -12,7 +12,7 @@
   box-sizing: border-box;
   width: 100%;
   max-width: $desktop;
-  padding: 20px $offset;
+  padding: 20px var(--padding);
   margin: 0 auto;
 }
 
