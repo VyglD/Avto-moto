@@ -53,3 +53,49 @@
 .prime-footer__nav-link:active {
   opacity: 0.2;
 }
+
+@media (max-width: $desktop) {
+  .prime-footer__nav {
+    padding: 18px 0 22px 0;
+  }
+
+  .prime-footer__nav-links-list {
+    display: block;
+
+    width: 100%;
+    margin: 0;
+  }
+
+  .prime-footer__nav-link {
+    --nav-link-padding: 15px;
+
+    max-width: 100%;
+    padding: calc(var(--nav-link-padding) / 2) 0;
+
+    text-align: center;
+  }
+}
+
+@media (min-width: $tablet) and (max-width: $desktop) {
+  .prime-footer__nav {
+    padding-top: 22px;
+  }
+
+  .prime-footer__nav-links-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+
+    max-width: 100%;
+  }
+
+  .prime-footer__nav-link-wrapper {
+    width: calc(100% / 3);
+  }
+
+  .prime-footer__nav-link {
+    padding-left: var(--padding);
+
+    text-align: left;
+  }
+}
