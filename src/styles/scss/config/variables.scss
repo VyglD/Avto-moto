@@ -10,6 +10,8 @@ $color-black-3: #585757;
 $color-black-4: #48494C;
 
 :root {
+  --padding: #{$padding-desktop};
+
   --color-black-0: #{$color-black-0};
   --color-black-0-05: rgba(#{hex-to-rgb($color-black-0)}, 0.5);
   --color-black-1: #{$color-black-1};
@@ -36,7 +38,7 @@ $color-black-4: #48494C;
   }
 }
 
-@media (min-width: $tablet) {
+@media (min-width: $tablet) and (max-width: $desktop) {
   :root {
     --padding: #{$padding-desktop};
   }

@@ -19,3 +19,32 @@
 .property-table__property-value {
   margin: 0;
 }
+
+@media (max-width: $tablet) {
+  .property-table {
+    max-width: 750px;
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  .property-table__properties-list {
+    margin-top: 20px;
+  }
+
+  .property-table__property-wrapper {
+    padding: 25px 0 9px;
+
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  .property-table__property-name {
+    max-width: 50%;
+  }
+}
+
+@media (min-width: $tablet) and (max-width: $desktop) {
+  .property-table__properties-list {
+    margin-top: 29px;
+  }
+}

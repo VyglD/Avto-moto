@@ -1,12 +1,14 @@
 .info {
-  margin-top: 10px;
+  overflow-x: hidden;
+
+  padding: 10px var(--padding);
+  margin-top: 80px;
 }
 
 .info__tabs-list {
   display: flex;
-  flex-wrap: wrap;
 
-  margin: 90px 0 0 3px;
+  margin: 0 0 0 3px;
 }
 
 .info__tab {
@@ -48,5 +50,23 @@
 
   &:active {
     opacity: 0.2;
+  }
+}
+
+@media (max-width: $tablet) {
+  .info {
+    margin-top: 30px;
+  }
+
+  .info__tabs-list {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+@media (min-width: $tablet) and (max-width: $desktop) {
+  .info {
+    margin-top: 19px;
+    margin-bottom: 41px;
   }
 }

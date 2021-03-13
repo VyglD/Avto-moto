@@ -2,12 +2,14 @@
   box-sizing: border-box;
   width: 100%;
   max-width: $desktop;
-  padding: 74px var(--padding);
+  padding: 74px 0 64px;
   margin: 0 auto;
 }
 
 .prime-main__banner {
   display: flex;
+
+  padding: 0 var(--padding);
 }
 
 .prime-main__right-column {
@@ -191,9 +193,10 @@
   max-width: 600px;
 }
 
-@media (max-width: $desktop) {
+@media (max-width: $tablet) {
   .prime-main {
     padding-top: 20px;
+    padding-bottom: 31px;
   }
 
   .prime-main__banner {
@@ -244,7 +247,7 @@
   }
 }
 
-@media (min-width: $tablet) {
+@media (min-width: $tablet) and (max-width: $desktop) {
   .prime-main__title {
     margin-top: 39px;
   }
@@ -256,26 +259,6 @@
   .prime-main__price {
     &--old {
       margin-top: 27px;
-    }
-  }
-}
-
-@media (min-width: $desktop) {
-  .prime-main__banner {
-    flex-wrap: nowrap;
-  }
-
-  .prime-main__title {
-    margin-top: 0;
-  }
-
-  .prime-main__property {
-    margin-right: 7px;
-  }
-
-  .prime-main__price {
-    &--old {
-      margin: 37px 6px 0;
     }
   }
 }
