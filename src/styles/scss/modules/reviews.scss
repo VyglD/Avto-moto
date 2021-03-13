@@ -162,3 +162,61 @@
 .reviews__add-button:active {
   opacity: 0.2;
 }
+
+@media (max-width: $desktop) {
+  .reviews {
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+
+  .reviews__add-button {
+    position: relative;
+    top: 0;
+    right: 0;
+
+    display: block;
+
+    margin: 20px auto 0;
+  }
+
+  .reviews__review-author {
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
+
+@media (max-width: $tablet) {
+  .reviews__list {
+    margin-top: 10px;
+  }
+
+  .reviews__review-advantages-title,
+  .reviews__review-advantages,
+  .reviews__review-disadvantage-title,
+  .reviews__review-disadvantage,
+  .reviews__review-comment-title {
+    display: none;
+  }
+
+  .reviews__review-comment {
+    margin-top: 10px;
+  }
+
+  .reviews__review-output {
+    margin-top: 31px;
+  }
+}
+
+@media (min-width: $tablet) and (max-width: $desktop) {
+  .reviews {
+    margin-bottom: 7px;
+  }
+
+  .reviews__add-button {
+    margin: 30px 0 0;
+  }
+
+  .reviews__review-rate-wrapper {
+    margin-top: 13px;
+  }
+}
