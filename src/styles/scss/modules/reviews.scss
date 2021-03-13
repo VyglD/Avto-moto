@@ -186,6 +186,10 @@
 }
 
 @media (max-width: $tablet) {
+  .reviews {
+    margin-bottom: 0;
+  }
+
   .reviews__list {
     margin-top: 10px;
   }
@@ -209,7 +213,7 @@
 
 @media (min-width: $tablet) and (max-width: $desktop) {
   .reviews {
-    margin-bottom: 7px;
+    margin-bottom: 30px;
   }
 
   .reviews__add-button {
