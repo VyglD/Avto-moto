@@ -48,7 +48,8 @@
   align-items: center;
 
   width: 100%;
-  margin-top: 39px;
+  max-width: 600px;
+  margin: 41px auto 0;
 }
 
 .slider__control-button {
@@ -116,4 +117,28 @@
 .slider__thumbnails-img {
   width: 100%;
   height: auto;
+}
+
+@media (max-width: $desktop) {
+  .slider {
+    left: 0;
+
+    margin: 0;
+  }
+
+  .slider__controls-wrapper {
+    display: none;
+  }
+}
+
+@media (min-width: $tablet) {
+  .slider__controls-wrapper {
+    display: flex;
+  }
+}
+
+@media (min-width: $desktop) {
+  .slider__controls-wrapper {
+    margin-top: 39px;
+  }
 }

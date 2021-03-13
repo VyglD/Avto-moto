@@ -66,7 +66,7 @@
   opacity: 0.2;
 }
 
-@media (max-width: $low-tablet) {
+@media (max-width: $tablet) {
   .prime-header__content {
     display: block;
 
@@ -74,7 +74,7 @@
   }
 
   .prime-header__logo {
-    margin-left: calc(var(--padding) + 2px);
+    margin-left: calc(var(--padding) - 6px);
   }
 
   .prime-header__nav {
@@ -85,7 +85,7 @@
 
   .prime-header__nav-button {
     padding: var(--button-padding);
-    margin: 0 calc(var(--padding) - var(--button-padding)) 0 auto;
+    margin: 0 calc(var(--padding) + 7px - var(--button-padding)) 0 auto;
   }
 
   .prime-header__nav-links-wrapper {
@@ -155,5 +155,26 @@
     &:hover {
       transform: scale(1);
     }
+  }
+}
+
+@media (min-width: $tablet) {
+  .prime-header__content {
+    padding-left: var(--padding);
+    padding-right: var(--padding);
+  }
+
+  .prime-header__logo {
+    margin-left: 0;
+  }
+
+  .prime-header__nav-button {
+    margin-right: calc(-1 * (var(--padding) - var(--button-padding)));
+  }
+}
+
+@media (min-width: $desktop) {
+  .prime-header__logo {
+    margin-left: 3px;
   }
 }

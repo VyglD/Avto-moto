@@ -1,8 +1,7 @@
 $padding-desktop: 21px;
 $desktop-content: 1175px;
-$desktop: #{$desktop-content + $padding-desktop};
+$desktop: #{$desktop-content + $padding-desktop * 2};
 $tablet: 768px;
-$low-tablet: #{$tablet - 1px};
 $mobile: 320px;
 
 $color-black-0: #000000;
@@ -11,8 +10,6 @@ $color-black-3: #585757;
 $color-black-4: #48494C;
 
 :root {
-  --padding: #{$padding-desktop};
-
   --color-black-0: #{$color-black-0};
   --color-black-0-05: rgba(#{hex-to-rgb($color-black-0)}, 0.5);
   --color-black-1: #{$color-black-1};
@@ -33,8 +30,14 @@ $color-black-4: #48494C;
   --color-red-2: #FF0000;
 }
 
-@media (max-width: $low-tablet) {
+@media (max-width: $tablet) {
   :root {
     --padding: 16px;
+  }
+}
+
+@media (min-width: $tablet) {
+  :root {
+    --padding: #{$padding-desktop};
   }
 }

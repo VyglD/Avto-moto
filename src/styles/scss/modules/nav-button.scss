@@ -129,7 +129,7 @@ $nav-button-offset: #{($nav-button-height-button - $nav-button-height-line) / 2}
   display: none;
 }
 
-@media (max-width: $low-tablet) {
+@media (max-width: $tablet) {
   .nav-button {
     --button-padding: 10px;
 
