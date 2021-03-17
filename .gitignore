@@ -8,8 +8,7 @@
 /coverage
 
 # Production
-# Требование ТЗ
-# /build
+/build
 
 # Misc
 .DS_Store
